@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Contact</th>
+            <th>Address</th>
+            <th>Data</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in ash %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.username}}</td>
+            <td>{{i.password}}</td>
+            <td>{{i.contact}}</td>
+            <td>{{i.address}}</td>
+            <td>{{i.date}}</td>
+            <td>
+                <form action="/delete/{{i.id}}/" method="post">
+                    {% csrf_token %}
+                    <input type="submit" class="btn btn-warning btn-sm" value="Delete">
+                </form>
+            </td>
+            <td>
+                <a href="http://127.0.0.1:8000/{{i.id}}/"  class="btn btn-primary btn-sm">Update</a>
+            </td>
+        </tr>
+
+        {% endfor %}
+    </tbody>
+
+</table>
+
+{% endblock body %}

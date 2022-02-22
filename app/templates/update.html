@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="bg-white border rounded-5">
+
+
+    <section class="w-100 p-4 p-xl-5" style="background-color: #eee; border-radius: .5rem .5rem 0 0;">
+        <style>
+            .gradient-custom-2 {
+                /* fallback for old browsers */
+                background: #fccb90;
+
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+            }
+
+            @media (min-width: 768px) {
+                .gradient-form {
+                    height: 100vh !important;
+                }
+            }
+
+            @media (min-width: 769px) {
+                .gradient-custom-2 {
+                    border-top-right-radius: .3rem;
+                    border-bottom-right-radius: .3rem;
+                }
+            }
+        </style>
+        <div class="row d-flex justify-content-center">
+            <div class="col-12">
+                <div class="card rounded-3 text-black">
+                    <div class="row g-0">
+                        <div class="col-lg-6">
+                            <div class="card-body p-md-5 mx-md-4">
+
+                                <div class="text-center">
+                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                                        style="width: 185px;" alt="logo">
+                                    <h4 class="mt-1 mb-5 pb-1">Update The Form</h4>
+                                </div>
+
+                                <form action="" method="post">
+                                    {% csrf_token %}
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="form2Example11"
+                                            style="margin-left: 0px;">Username</label>
+                                        <input type="text" name="username" id="form2Example11" class="form-control">
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 66.4px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="form2Example22"
+                                            style="margin-left: 0px;">Password</label>
+                                        <input type="password" name="password" id="form2Example22" class="form-control">
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 64px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="form2Example11"
+                                        style="margin-left: 0px;">Contact Number:</label>
+                                        <input type="text" name="contact" id="form2Example11" class="form-control">
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 66.4px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="form2Example11"
+                                            style="margin-left: 0px;">Address</label>
+                                        <input type="text" name="address" id="form2Example11" class="form-control">
+                                        <div class="form-notch">
+                                            <div class="form-notch-leading" style="width: 9px;"></div>
+                                            <div class="form-notch-middle" style="width: 66.4px;"></div>
+                                            <div class="form-notch-trailing"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center pt-1 mb-5 pb-1">
+                                        <input class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
+                                            value="Log IN" type="submit">
+                                    </div>
+                                </form>
+
+
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                            <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                                <h4 class="mb-4">We are more than just a company</h4>
+                                <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="p-4 text-center border-top mobile-hidden">
+        <a class="btn btn-link px-3" data-mdb-toggle="collapse" href="#example2" role="button" aria-expanded="false"
+            aria-controls="example2" data-ripple-color="hsl(0, 0%, 67%)">
+            <i class="fas fa-code me-md-2"></i>
+            <span class="d-none d-md-inline-block">
+                Show code
+            </span>
+        </a>
+
+
+        <a class="btn btn-link px-3 " data-ripple-color="hsl(0, 0%, 67%)">
+            <i class="fas fa-file-code me-md-2 pe-none"></i>
+            <span class="d-none d-md-inline-block export-to-snippet pe-none">
+                Edit in sandbox
+            </span>
+        </a>
+
+    </div>
+
+
+</div>
+
+{% endblock body %}
